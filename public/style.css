@@ -3,8 +3,8 @@ body {
 }
 #div_header {
   background-color: #e9f5f9;
-  box-shadow: rgba(31, 125, 59, 0.27) 0px 2px 50px 0px,
-    rgba(30, 124, 58, 0.04) -86px -92px 3px -47px;
+  /* box-shadow: rgba(182, 214, 191, 0.27) 0px 2px 50px 0px,
+    rgba(30, 124, 58, 0.04) -86px -92px 3px -47px; */
 }
 #name {
   font-family: "Courier New", monospace;
@@ -29,6 +29,9 @@ body {
   font-size: small;
   padding: auto;
   text-decoration: none;
+   
+}
+#name {
 }
 .head_link:hover {
   background-color: #d0e8d3;
@@ -49,6 +52,7 @@ body {
 .col_title_success {
   color: #27968c;
 }
+
 .col_title_big {
   font-size: 20px;
   color: #27968c;
@@ -89,4 +93,22 @@ body {
 }
 #algorithms {
   min-height: 300px;
+}
+
+#about_me {
+  background: rgb(34, 166, 99);
+  background: linear-gradient(
+    90deg,
+    rgb(54, 14, 2) 0%,
+    rgb(18, 104, 47) 35%,
+    rgb(4, 61, 61) 100%
+  );
+}
+.about_me_text {
+  text-shadow: -1px -1px 1px rgba(255, 255, 255, 0.1),
+    1px 1px 1px rgba(0, 0, 0, 0.5), -4px -1px 19px rgba(119, 125, 22, 0.15);
+  color: #aaac54;
+}
+.about_me_text_color {
+  color: #70d6c9;
 }

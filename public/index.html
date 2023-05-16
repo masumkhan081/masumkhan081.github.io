@@ -1,1251 +1,873 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- Bootstrap CSS -->
 
-    <title>son of a mern !</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      rel="stylesheet"
-      href="./style.css"
-      <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-    />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Bootstrap CSS -->
+  <title>son of a mern !</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./style.css" <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+  <link rel="stylesheet" href="./index.css" />
+</head>
 
-    <link rel="stylesheet" href="./index.css" />
-  </head>
-
-  <body>
-    <!-- bg-info bg-opacity-10    DarkSlateGray -->
-    <!--  -->
-    <div
-      class="row border-0 border-bottom rounded-3 sticky-top"
-      id="div_header"
-    >
-      <div class="col-md-4 col-12 col-sm-6">
-        <span
-          id="name"
-          href="#header_end_row"
-          class="ps-4 fs-4 fw-bold pe-auto d-block pt-1 text-uppercase"
-          >Masum Khan
+<body>
+  <!-- bg-info bg-opacity-10    DarkSlateGray -->
+  <!--  -->
+  <div class="row border-0 border-bottom rounded-3 sticky-top " id="div_header">
+    <div class="col-md-4 col-sm-6 d-flex justify-content-start">
+      <div>
+        <span id="name" href="#header_end_row" class="ps-4 fs-4 fw-bold pe-auto d-block pt-1 text-uppercase">Masum Khan
         </span>
         <span id="title" class="ps-4 d-block pb-1">Full Stack Developer </span>
       </div>
-      <div
-        class="col-md-8 col-sm-12 d-flex flex-wrap justify-content-around align-items-center text-wrap"
-      >
-        <a
-          href="./resources/Resume@Masum-Khan.pdf"
-          download
-          class="px-2 head_link"
-          id="btn_resume"
-          onclick=" "
-        >
-          <i class="fa fa-download" aria-hidden="true"></i> CV
-        </a>
-        <a href="#about_me" class="px-2 head_link">
-          <img
-            src="./resources/images/mk_avatar_bgless.png"
-            height="20px"
-            width="25px"
-          />
-          About Me</a
-        >
-        <a href="#algorithms" class="px-2 head_link"
-          ><i class="fa-sharp fa-solid fa-diagram-project me-1"></i
-          >Algorithms</a
-        >
-        <a href="#project_works" class="px-2 head_link"
-          ><i class="fa-solid fa-camera me-1"></i>Project Works</a
-        >
-        <button
-          class="btn btn-sm py-0 my-auto head_link"
-          id="btn_toggle"
-          onclick="toggle_theme()"
-          disabled
-        >
-          Dark/Light
-        </button>
-      </div>
     </div>
-    <!--      HEADER-END      -->
     <div
-      id="header_end_row"
-      class="row d-flex justify-content-around mt-3 px-3 pb-5"
-    >
+      class="btn-group col-md-8 col-sm-12 d-flex gap-2 flex-wrap flex-column flex-sm-row justify-content-start align-content-center text-wrap">
       <!--  -->
-      <div id="infoColumn" class="col-md-4 col-sm-6 rounded-3" id="div1">
-        <!-- <span class="px-1 rounded-pill float-end text-black shadow-sm">
+      <a href="./resources/Resume@Masum-Khan.pdf" download
+        class="btn btn-sm px-2 head_link text-center   rounded-3 head_link flex-grow-0" id="btn_resume">
+        <i class="fa fa-download" aria-hidden="true"></i> CV </a>
+      <!--  -->
+      <div class="btn-group head_link_before head_link">
+        <button type="button" class="btn btn-sm  dropdown-toggle  head_link rounded-3"
+          data-bs-toggle="dropdown">Programming</button>
+        <ul class="dropdown-menu">
+          <li><a href="#ml_works" class="dropdown-item px-2 text-center  "> <i class="fas fa-list me-1 "></i> Machine
+              Learning</a></li>
+          <li><a href="#algorithms" class="dropdown-item px-2 text-center "> <i class="fas fa-list me-1 "></i>Classical
+              Algorithm</a></li>
+        </ul>
+      </div>
+      <!--  -->
+      <div class="btn-group  head_link">
+        <button type="button" class="btn btn-sm  dropdown-toggle head_link rounded-3"
+          data-bs-toggle="dropdown">Development</button>
+        <ul class="dropdown-menu">
+          <li><a href="#projectsColumn" class="dropdown-item px-2 text-center  "><i
+                class="fa-sharp fa-solid fa-link me-1"></i>Live Projects</a></li>
+          <li><a href="#project_works" class="dropdown-item px-2 text-center "><i
+                class="fa-solid fa-camera me-1"></i>Project Works</a></li>
+        </ul>
+      </div>
+      <a href="#about_me" class="btn btn-sm px-2 head_link  rounded-3 text-center flex-grow-0">
+         <i class="fa fa-info-circle fs-6" aria-hidden="true"></i> About Me   </a>
+      <button class="btn btn-sm py-0 my-auto head_link flex-grow-0 rounded-3" id="btn_toggle" disabled onclick="toggle_theme()">
+        Dark/Light </button>
+    </div>
+  </div>
+  <!--      HEADER-END      -->
+  <div id="header_end_row" class="row d-flex justify-content-around mt-4 px-3 pb-5">
+    <!--  -->
+    <div id="infoColumn" class="col-md-5 col-sm-6 rounded-3">
+      <!-- <span class="px-1 rounded-pill float-end text-black shadow-sm">
           <i class="fa-solid fa-info-circle me-1"></i>Profile
         </span> -->
-        <ul
-          class="d-flex flex-column gap-2 flex-wrap list-unstyled ps-2 justify-content-center mt"
-        >
-          <!--  text-center  -->
-          <li class=" ">
-            <img
-              height="175"
-              width="165"
-              class="rounded-circle"
-              src="./resources/images/mk-6.png"
-            />
+      <ul
+        class="d-flex flex-column gap-2 flex-wrap list-unstyled ps-2 justify-content-start align-content-sm-start align-content-center mt-3">
+        <!--  text-center  -->
+        <li class=" ">
+          <img height="213" width="175" class="rounded-pill" src="./resources/images/mk10.jpg" />
+        </li>
+        <li><i class="fas fa-mobile-alt me-1"></i>+880 1833-347848</li>
+        <li>
+          <i class="fa-solid fa-house fa-sm me-1"></i>Beanibazar, Sylhet
+        </li>
+        <li>
+          <i class="fa-solid fa-location-dot me-1"></i>Khadim-Shahporan, Sylhet Sadar
+        </li>
+        <li>
+          <i class="fa-solid fa-globe me-1"></i><a class="text-decoration-none" target="_blank"
+            href="https://masumk081.web.app">masumk081.web.app</a>
+        </li>
+        <li>
+          <i class="fa-brands fa-linkedin me-1"></i>
+          <a class="text-decoration-none" href="https://www.linkedin.com/in/masumkhan"
+            target="_blank">linkedin.com/in/masumkhan</a>
+        </li>
+        <li>
+          <i class="fa-brands fa-github me-1"></i>
+          <a class="text-decoration-none" href="https://github.com/masumkhan081" target="_blank">Repositories</a>
+        </li>
+        <li>
+          <i class="fa-brands fa-facebook me-1"></i>
+          <a class="text-decoration-none" href="https://www.facebook.com/fanofnietzsche"
+            target="_blank">facebook.com/fanofnietzsche</a>
+        </li>
+        <li>
+          <span class=" "><i class="fas fa-envelope me-1"></i>masumkhan081@gmail.com</span>
+        </li>
+        <li>
+          <span class="badge text-black fw-bold text-start"> Academy:</span>
+          <ul class="d-flex flex-column flex-wrap">
+            <li>BSC In CSE, North East University BD</li>
+            <li>HSC (sci), Beanibazar Govt College</li>
+            <li>SSC (sci), Sylhet Govt Pilot High School</li>
+          </ul>
+        </li>
+        <li>
+          <span class="badge text-black text-start">Hobbies:</span>
+          <ul class="d-flex gap-3 list-unstyled">
+            <li>
+              <img src="./resources/images/fishing-2.png" height="40" class="rounded-circle bg-black bg-opacity-10" />
+            </li>
+            <li>
+              <img src="./resources/images/reading-5.png" height="40" class="rounded-circle bg-black bg-opacity-10" />
+            </li>
+            <li>
+              <img src="./resources/images/cricket.png" height="40"
+                class="pt-1 rounded-circle bg-success bg-black bg-opacity-10" />
+            </li>
+            <li>
+              <img src="./resources/images/game.png" height="40" class="pt-1 rounded-circle bg-success bg-opacity-10" />
+            </li>
+            <li>
+              <img src="./resources/images/travel.png" height="40"
+                class="pt-1 rounded-circle bg-success bg-black bg-opacity-10" />
+            </li>
+          </ul>
+        </li>
+        <!--  -->
+        <li>
+          <span class="badge text-black fw-bold text-start">Interests:</span>
+          <ul class="d-flex flex-column flex-wrap">
+            <li>Serverless arcitecture</li>
+            <li>API-first development</li>
+            <li>Progressive Web Apps</li>
+            <li>Deep Learning</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!--  -->
+    <div id="skillsColumn" class="col-md-6 col-sm-6 rounded-3 pt-2 mx-auto" id="div2">
+      <!-- style="background-color: rgb(7, 64, 66); min-height: 460px" -->
+      <!-- rgb(7, 64, 66)    text-light    bg-danger bg-opacity-10-->
+      <span class="d-block w-100 text-center col_title col_title_success pb-sm-2 pb-1">
+        <i class="fa-solid fa-code me-1"></i>Skills </span>
+      <!--  -->
+      <ul class="pb-0 d-flex flex-column gap-2 flex-wrap list-unstyled h-100 w-100 text-black">
+        <li class="w-100 rounded-3 bg-success bg-opacity-10 pb-2">
+          <span
+            class="mb-1 d-block text-center shadow-sm badge rounded-pill bg-success bg-opacity-25  text-black  ">Coding
+            & Algorithm</span>
+          <ul style="font-size: 14px">
+            <li> UVA Problem Solving<a class="ms-1 text-decoration-none" href="https://uhunt.onlinejudge.org/id/759640"
+                target="_blank">uHunt Profile</a>
+            </li>
+            <li class=" "> Classic Algorithm: <a class="ms-1 text-decoration-none" href="#algorithms">Details </a>
+            </li>
+            <li class=" "> Machine Learning (raw-coding): <a class="ms-1 text-decoration-none" href="#ml_works">See </a>
+            </li>
+            <li class=" "> ML Algorithm (Scikit-Learn): <a class="ms-1 text-decoration-none" href="#ml_works">See </a>
+            </li>
+          </ul>
+        </li>
+        <!-- bg-success bg-opacity-10 -->
+        <li class="w-100 rounded-3 bg-success bg-opacity-10 pb-2">
+          <ul style="font-size: 14px">
+            <li class="mb-1 d-block text-center shadow-sm badge bg-success bg-opacity-50 text-black"> Front-end </li>
+            <li class="mb-1">
+              <span class="badge bg-inherit border border-success text-dark px-1 me-2">Main</span>React - Redux - Next
+            </li>
+            <li class="mb-1">
+              <span class="badge bg-inherit border border-success text-dark px-1 me-2">CSS Frameworks</span>Tailwind
+              CSS, Bootstrap
+            </li class="mb-1">
+            <li>
+              <span class="badge bg-inherit border border-success text-dark px-1 me-2">Component
+                Libraries</span>Material-UI, Tailwind elements, React-bootstrap
+            </li>
+            <li class="mb-1">
+              <span class="badge bg-inherit border border-success text-dark px-1 me-2">Animations</span>React-spring,
+              Framer-motion, React-animations
+            </li>
+            <li class="mb-1">
+              <span class="badge bg-inherit border border-success text-dark px-1 me-2">Visualization</span>Visx,
+              Recharts, Faker-js
+            </li>
+            <li class="mb-1">
+              <span class="badge bg-inherit border border-success text-dark px-1 me-2">Form / Validation</span> Formik,
+              Yup, React-hook-form, Yup,
+            </li>
+            <li class="mb-1">
+              <span class="badge bg-inherit border border-success text-dark px-1 me-2">Others</span>React-router,
+              React-table, Axios, React-pdf, React-icon, and as neccesaary.
+            </li>
+          </ul>
+        </li>
+        <li class="w-100 rounded-3 bg-success bg-opacity-10 pb-2">
+          <ul style="font-size: 14px">
+            <li class=" mb-1 d-block text-center shadow-sm badge bg-success bg-opacity-50 text-black"> Back-end </li>
+            <li class="mb-1">
+              <span class="badge bg-inherit border border-success text-dark px-1 me-2">Main</span>Node - Express
+            </li>
+            <li class="mb-1">
+              <span class="badge bg-inherit border border-success text-dark px-1 me-2">Others</span>Passport,
+              Nodemailer, Bcrypt, Multer, JOI, Async, J-W-T, Socket.io, Moment
+            </li>
+          </ul>
+        </li>
+        <!-- , MongoDB (mongoose), and GraphQL -->
+        <li class="rounded-3 bg-success bg-opacity-10 pb-2">
+          <ul style="font-size: 14px" class=" ">
+            <li class="ms-0 ps-0 mb-1 d-block w-100 text-center shadow-sm badge bg-success bg-opacity-50 text-black">
+              Data-tier </li>
+            <li class="mb-1">
+              <span class="badge bg-inherit border border-success text-dark px-1 me-2">NoSQL</span>
+              <ul class="list-unstyled">
+                <li>MongoDB (mongoose) / <i class="fa-solid fa-cloud-arrow-up ms-1 me-1"></i>MongoDB Atlas</li>
+                <li>Firebase / <i class="fa-solid fa-cloud-arrow-up ms-1 me-1"></i>Firestore</li>
+              </ul>
+            </li>
+            <li class="mb-1">
+              <span class="badge bg-inherit border border-success text-dark px-1 me-2">SQL</span>
+              <ul class="list-unstyled">
+                <li>PostgreSQL ( pg, sequelize ) / <i class="fa-solid fa-cloud-arrow-up ms-1 me-1"></i>ElephantSQL</li>
+                <li>SQL</span> <i class="fa-solid fa-database mx-1"></i>SQLite3</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li class="w-100 rounded-3 bg-success bg-opacity-10 pb-2">
+          <span
+            class="ms-0 ps-0 mb-1 d-block w-100 text-center shadow-sm badge rounded-pill bg-success bg-opacity-25 text-black">
+            Personal Skill</span>
+          <ul style="font-size: 14px">
+            <li> Programming & problem solving ability </li>
+            <li>Fast self-learning</li>
+            <li> Logical & structured thinking </li>
+            <li> Good communication skill (Eng) </li>
+            <li> Good at ana user requirements </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!-- Header_end_row = Ended  -->
+  </div>
+  <!-- -->
+  <div id="projectsColumn" class="mx-auto col-11 pt-2 text-center " id="project_list">
+    <span class="d-block w-100 text-center col_title col_title_big col_title_success pb-sm-2 pb-1 mb-3">
+      <i class="fa-solid fa-display me-1"></i> Personal Projects </span>
+    <div class=" d-flex flex-column w-100" id="div3inner">
+      <div class="w-100 pb-1">
+        <span class="w-100 d-block text-center bg-success bg-opacity-25 rounded-3 fw-bold text-black border-0"> Drugs
+          Info </span>
+        <ul style="font-size: 14px" class="px-2 list-unstyled text-start">
+          <li class="text-wrap">
+            <span class="text-dark fw-bold me-1">Tools:</span> mongoose, express, mongoDB atlas, ejs
           </li>
-          <li><i class="fas fa-mobile-alt me-1"></i>+880 1833-347848</li>
+          <li><span class="text-dark fw-bold me-1">Summary:</span>A Info system for drugs, generics, groups,
+            manufacturers with tabular view of data and actions on it to be transformed to prescription system in
+            future.</li>
           <li>
-            <i class="fa-solid fa-house fa-sm me-1"></i>Beanibazar, Sylhet
+            <a href="https://drugs-info.onrender.com" target="_blank" class="float-start text-decoration-none"><i
+                class="fa-sharp fa-solid fa-link me-1"></i>Deploy (Render)</a>
+            <a href="./resources/demo.html" target="_blank" class="float-end text-decoration-none"><i
+                class="fa-brands fa-youtube text-danger me-1"></i>Summary</a>
           </li>
-          <li>
-            <i class="fa-solid fa-location-dot me-1"></i>Khadim, Sylhet Sadar
+        </ul>
+      </div>
+      <div class="w-100 pb-1">
+        <span class="w-100 d-block text-center rounded-3 bg-success bg-opacity-25 fw-bold text-black border-0"> Online
+          Resume Builder </span>
+        <ul style="font-size: 14px" class="px-2 list-unstyled text-start">
+          <li class="text-wrap">
+            <span class="text-dark fw-bold me-1">Tools:</span> react, firebase, firestore, bs5, react-pdf, react-icon
           </li>
+          <li><span class="text-dark fw-bold me-1">Summary:</span>Online resume builder for soft. developers</li>
           <li>
-            <i class="fa-solid fa-globe me-1"></i
-            ><a
-              class="text-decoration-none"
-              target="_blank"
-              href="https://masumk081.web.app"
-              >masumk081.web.app</a
-            >
-          </li>
-          <li>
-            <i class="fa-brands fa-linkedin me-1"></i>
-            <a
-              class="text-decoration-none"
-              href="https://www.linkedin.com/in/masumkhan"
-              target="_blank"
-              >linkedin.com/in/masumkhan</a
-            >
-          </li>
-          <li>
-            <i class="fa-brands fa-github me-1"></i>
-            <a
-              class="text-decoration-none"
-              href="https://github.com/masumkhan081"
-              target="_blank"
-              >Repositories</a
-            >
-          </li>
-          <li>
-            <i class="fa-brands fa-facebook me-1"></i>
-            <a
-              class="text-decoration-none"
-              href="https://www.facebook.com/fanofnietzsche"
-              target="_blank"
-              >facebook.com/fanofnietzsche</a
-            >
-          </li>
-          <li>
-            <span class=""
-              ><i class="fas fa-envelope me-1"></i
-              >study.contents.of.masumkhan@gmail</span
-            >
-          </li>
-          <li>
-            <span class="badge text-black fw-bold text-start"> Academy:</span>
-            <ul class="d-flex flex-column flex-wrap">
-              <li>BSC In CSE, North East University BD</li>
-              <li>HSC (sci), Beanibazar Govt College</li>
-              <li>SSC (sci), Sylhet Govt Pilot High School</li>
-            </ul>
-          </li>
-          <li>
-            <span class="badge text-black text-start">Hobbies:</span>
-            <ul class="d-flex gap-3 list-unstyled">
-              <li>
-                <img
-                  src="./resources/images/fishing-2.png"
-                  height="40"
-                  class="rounded-circle bg-black bg-opacity-10"
-                />
-              </li>
-              <li>
-                <img
-                  src="./resources/images/reading-5.png"
-                  height="40"
-                  class="rounded-circle bg-black bg-opacity-10"
-                />
-              </li>
-              <li>
-                <img
-                  src="./resources/images/cricket.png"
-                  height="40"
-                  class="pt-1 rounded-circle bg-success bg-black bg-opacity-10"
-                />
-              </li>
-              <li>
-                <img
-                  src="./resources/images/game.png"
-                  height="40"
-                  class="pt-1 rounded-circle bg-success bg-opacity-10"
-                />
-              </li>
-              <li>
-                <img
-                  src="./resources/images/travel.png"
-                  height="40"
-                  class="pt-1 rounded-circle bg-success bg-black bg-opacity-10"
-                />
-              </li>
-            </ul>
-          </li>
-          <!--  -->
-          <li>
-            <span class="badge text-black fw-bold text-start">Interests:</span>
-            <ul class="d-flex flex-column flex-wrap">
-              <li>Serverless arcitecture</li>
-              <li>API-first development</li>
-              <li>Progressive Web Apps</li>
-              <li>Deep Learning</li>
-            </ul>
+            <a href="https://resume-builder-081.netlify.app" target="_blank" class="float-start text-decoration-none"><i
+                class="fa-sharp fa-solid fa-link me-1"></i>Deployed (Netlify)</a>
+            <a href="./resources/demo.html" target="_blank" class="float-end text-decoration-none"><i
+                class="fa-brands fa-youtube text-danger me-1"></i>Summary</a>
           </li>
         </ul>
       </div>
       <!--  -->
-      <div id="skillsColumn" class="col-md-4 col-sm-6 rounded-3 pt-2" id="div2">
-        <!-- style="background-color: rgb(7, 64, 66); min-height: 460px" -->
-        <!-- rgb(7, 64, 66)    text-light    bg-danger bg-opacity-10-->
-        <span
-          class="d-block w-100 text-center col_title col_title_success pb-sm-2 pb-1"
-        >
-          <i class="fa-solid fa-code me-1"></i>Skills
-        </span>
-        <!--  -->
-        <ul
-          class="pb-0 d-flex flex-column gap-1 flex-wrap list-unstyled h-100 w-100 text-black"
-        >
-          <li class="w-100 rounded-3 bg-success bg-opacity-10">
-            <span
-              class="mb-1 d-block text-center shadow-sm badge bg-success bg-opacity-25 text-black"
-              >Coding & Algorithm</span
-            >
-            <ul style="font-size: 15px">
-              <li class="text-black text-opacity-75">
-                UVA Problem Solving<a
-                  class="ms-1"
-                  href="https://uhunt.onlinejudge.org/id/759640"
-                  target="_blank"
-                  >uHunt Profile</a
-                >
-              </li>
-              <li class="text-black text-opacity-75">
-                Classic Algorithm:
-                <a
-                  class="ms-1"
-                  href="https://github.com/masumkhan081//trad_algo"
-                  target="_blank"
-                  >Github
-                </a>
-              </li>
-              <li class="text-black text-opacity-75">
-                Machine Learning (raw-coding):
-                <a
-                  class="ms-1"
-                  href="https://github.com/masumkhan081//machine_algorithm"
-                  target="_blank"
-                  >Github
-                </a>
-              </li>
-              <li class="text-black text-opacity-75">
-                ML Algorithm (Scikit-Learn):
-                <a
-                  class="ms-1"
-                  href="https://github.com/masumkhan081//machine_algorithm"
-                  target="_blank"
-                  >Github
-                </a>
-              </li>
-            </ul>
+      <div class="w-100 pb-1">
+        <span class="w-100 d-block text-center rounded-3 bg-success bg-opacity-25 fw-bold text-black border-0"> Task
+          Distribution </span>
+        <ul style="font-size: 14px" class="px-2 list-unstyled text-start">
+          <li class="text-wrap">
+            <span class="text-dark fw-bold me-1">Tools:</span> jwt, redux, react, postgreSQL, material ui
           </li>
-          <!-- bg-success bg-opacity-10 -->
-          <li class="w-100 rounded-3 bg-success bg-opacity-10">
-            <ul style="font-size: 15px">
-              <li
-                class="mt-2 mb-1 d-block text-center shadow-sm badge bg-success bg-opacity-50 text-black"
-              >
-                Front-end
-              </li>
-              <li class="text-black text-opacity-75">React - Redux - Next</li>
-
-              <li class="text-black text-opacity-75">
-                <span class="badge text-success">Component Libs:</span
-                >Material-UI, Tailwind elements, React-bootstrap
-                <span class="badge text-success">Animations:</span>React-spring,
-                Framer-motion, React-animations
-                <span class="badge text-success">Visualization:</span>Visx,
-                Recharts
-                <span class="badge text-success">Others:</span>
-                Bootstrap, Tailwind CSS, React-router, React-table, Axios,
-                React-pdf, React-icon, and as neccesaary.
-              </li>
-            </ul>
-          </li>
-          <li class="w-100 rounded-3 bg-success bg-opacity-10">
-            <ul style="font-size: 15px">
-              <li
-                class="mt-2 mb-1 d-block text-center shadow-sm badge bg-success bg-opacity-50 text-black"
-              >
-                Back-end
-              </li>
-              <li class="text-black text-opacity-75">Node - Express</li>
-              <li class="text-black text-opacity-75">
-                <span class="badge text-success">Others</span> Passport,
-                Nodemailer, Bcrypt, Multer, JOI, Async, J-W-T, Socket.io, Moment
-              </li>
-            </ul>
-          </li>
-          <!-- , MongoDB (mongoose), and GraphQL -->
-          <li class="rounded-3 bg-success bg-opacity-10">
-            <ul style="font-size: 15px">
-              <li
-                class="ms-0 ps-0 mt-2 mb-1 d-block w-100 text-center shadow-sm badge bg-success bg-opacity-50 text-black"
-              >
-                Data-tier
-              </li>
-              <li class="text-black text-opacity-75">
-                MongoDB (mongoose) /
-                <i class="fa-solid fa-cloud-arrow-up ms-1 me-1"></i>MongoDB
-                Atlas
-              </li>
-              <li class="text-black text-opacity-75">
-                PostgreSQL (pg, sequelize) /
-                <i class="fa-solid fa-cloud-arrow-up ms-1 me-1"></i>ElephantSQL
-              </li>
-              <li class="text-black text-opacity-75">
-                Firebase /
-                <i class="fa-solid fa-cloud-arrow-up ms-1 me-1"></i>Firestore
-              </li>
-              <li class="text-black text-opacity-75">
-                SQL / <i class="fa-solid fa-database mx-1"></i>SQLite3
-              </li>
-            </ul>
-          </li>
-          <li class="w-100 rounded-3 bg-success bg-opacity-10">
-            <span
-              class="mt-2 mb-1 d-block text-center shadow-sm badge bg-success bg-opacity-25 text-black"
-            >
-              Personal Skill</span
-            >
-            <ul style="font-size: 15px">
-              <li class="text-black text-opacity-75">
-                Programming & problem solving ability
-              </li>
-              <li class="text-black text-opacity-75">Fast self-learning</li>
-              <li class="text-black text-opacity-75">
-                Logical & structured thinking
-              </li>
-              <li class="text-black text-opacity-75">
-                Good communication skill (Eng)
-              </li>
-              <li class="text-black text-opacity-75">
-                Good at ana user requirements
-              </li>
-            </ul>
+          <li><span class="text-dark fw-bold me-1">Summary:</span>App for any development team with different roles to
+            distribute tasks, mark and manage them along with scope for inviting a new member over email</li>
+          <li>
+            <a href="https://task-collaborator.onrender.com" target="_blank" class="float-start text-decoration-none"><i
+                class="fa-sharp fa-solid fa-link me-1"></i>Deployed (Render)</a>
+            <a href="./resources/demo.html" target="_blank" class="float-end text-decoration-none"><i
+                class="fa-brands fa-youtube text-danger me-1"></i>Summary</a>
           </li>
         </ul>
       </div>
       <!--  -->
-      <div
-        id="projectsColumn"
-        class="col-md-3 col-sm-10 pt-2"
-        id="project_list"
-      >
-        <span
-          class="d-block w-100 text-center col_title col_title_success pb-sm-2 pb-1"
-        >
-          <i class="fa-solid fa-display me-1"></i> Projects
-        </span>
-        <div
-          class="bg-success bg-opacity-10 d-flex flex-column w-100"
-          id="div3inner"
-        >
-          <div class="w-100 pb-1">
-            <span
-              class="w-100 d-block text-center bg-success bg-opacity-25 rounded-3 fw-bold text-black border-0"
-            >
-              drugs-info
-            </span>
-            <ul style="font-size: 14px" class="px-2 list-unstyled">
-              <li><span class="text-primary">Summary:</span></li>
-              <li class="text-wrap">
-                <span class="text-primary">Tools:</span> mongoose, express,
-                mongoDB atlas, ejs
-              </li>
-              <li>
-                <a
-                  href="https://drugs-info.onrender.com"
-                  target="_blank"
-                  class="float-start text-decoration-none"
-                  ><i class="fa-sharp fa-solid fa-link me-1"></i>Deploy
-                  (Render)</a
-                >
-                <a
-                  href="./resources/demo.html"
-                  target="_blank"
-                  class="float-end text-decoration-none"
-                  ><i class="fa-brands fa-youtube text-danger me-1"></i
-                  >Summary</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="w-100 pb-1">
-            <span
-              class="w-100 d-block text-center bg-success bg-opacity-25 fw-bold text-black border-0"
-            >
-              resume-builder
-            </span>
-            <ul style="font-size: 14px" class="px-2 list-unstyled">
-              <li><span class="text-primary">Summary:</span></li>
-              <li class="text-wrap">
-                <span class="text-primary">Tools:</span> react, firebase,
-                firestore, bs5, react-pdf, react-icon
-              </li>
-              <li>
-                <a
-                  href="https://resume-builder-081.netlify.app"
-                  target="_blank"
-                  class="float-start text-decoration-none"
-                  ><i class="fa-sharp fa-solid fa-link me-1"></i>Deployed
-                  (Netlify)</a
-                >
-                <a
-                  href="./resources/demo.html"
-                  target="_blank"
-                  class="float-end text-decoration-none"
-                  ><i class="fa-brands fa-youtube text-danger me-1"></i
-                  >Summary</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="w-100 pb-1">
-            <span
-              class="w-100 d-block text-center bg-success bg-opacity-25 fw-bold text-black border-0"
-            >
-              reg-system
-            </span>
-            <ul style="font-size: 14px" class="px-2 py-1 list-unstyled">
-              <li><span class="text-primary">Summary:</span></li>
-              <li class="text-wrap">
-                <span class="text-primary">Tools:</span> mongoose, mongodb
-                atlas, passport, nodemailer, express-ejs-layout
-              </li>
-              <li>
-                <a
-                  href="https://reg-sys-passport.onrender.com"
-                  target="_blank"
-                  class="float-start text-decoration-none"
-                  ><i class="fa-sharp fa-solid fa-link me-1"></i>Deployed
-                  (Render)</a
-                >
-                <a
-                  href="./resources/demo.html"
-                  target="_blank"
-                  class="float-end text-decoration-none"
-                  ><i class="fa-brands fa-youtube text-danger me-1"></i
-                  >Summary</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="w-100 pb-1">
-            <span
-              class="w-100 d-block text-center bg-success bg-opacity-25 fw-bold text-black border-0"
-            >
-              task collaborator
-            </span>
-            <ul style="font-size: 14px" class="px-2 list-unstyled">
-              <li><span class="text-primary">Summary:</span></li>
-              <li class="text-wrap">
-                <span class="text-primary">Tools:</span> jwt, redux, react,
-                postgreSQL, material ui
-              </li>
-              <li>
-                <a
-                  href="https://task-collaborator.onrender.com"
-                  target="_blank"
-                  class="float-start text-decoration-none"
-                  ><i class="fa-sharp fa-solid fa-link me-1"></i>Deployed
-                  (Render)</a
-                >
-                <a
-                  href="./resources/demo.html"
-                  target="_blank"
-                  class="float-end text-decoration-none"
-                  ><i class="fa-brands fa-youtube text-danger me-1"></i
-                  >Summary</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="w-100 pb-1">
-            <span
-              class="w-100 d-block text-center bg-success bg-opacity-25 fw-bold text-black border-0"
-            >
-              hospital mgmt sys
-            </span>
-            <ul style="font-size: 14px" class="px-2 py-1 list-unstyled">
-              <li><span class="text-primary">Summary:</span></li>
-              <li class="text-wrap">
-                <span class="text-primary">Tools:</span> java swing, SQLite
-              </li>
-              <li>
-                <a
-                  href="./resources/demo.html"
-                  target="_blank"
-                  class="float-start text-decoration-none"
-                  ><i class="fa-sharp fa-solid fa-link me-1"></i>Screenshots</a
-                >
-                <a
-                  href="./resources/demo.html"
-                  target="_blank"
-                  class="float-end text-decoration-none"
-                  ><i class="fa-brands fa-youtube text-danger me-1"></i
-                  >Summary</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="w-100 pb-1">
-            <span
-              class="w-100 d-block text-center bg-success bg-opacity-25 fw-bold text-black border-0"
-            >
-              pharmacy mgmt
-            </span>
-            <ul style="font-size: 14px" class="px-2 list-unstyled">
-              <li><span class="text-primary">Summary:</span></li>
-              <li class="text-black text-wrap">
-                <span class="text-primary">Tools:</span> javaFx, sqlite
-              </li>
-              <li>
-                <a
-                  href="./resources/demo.html"
-                  target="_blank"
-                  class="float-start text-decoration-none"
-                  ><i class="fa-sharp fa-solid fa-link me-1"></i>Screenshots</a
-                >
-                <a
-                  href="./resources/demo.html"
-                  target="_blank"
-                  class="float-end text-decoration-none"
-                  ><i class="fa-brands fa-youtube text-danger me-1"></i
-                  >Summary</a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
+      <div class="w-100 pb-1">
+        <span class="w-100 d-block text-center rounded-3 bg-success bg-opacity-25 fw-bold text-black border-0"> A
+          Complete Registration System</span>
+        <ul style="font-size: 14px" class="px-2 py-1 list-unstyled text-start">
+          <li class="text-wrap">
+            <span class="text-dark fw-bold me-1">Tools:</span> mongoose, mongodb atlas, passport, nodemailer,
+            express-ejs-layout
+          </li>
+          <li><span class="text-dark fw-bold me-1">Summary:</span></li>
+          <li>
+            <a href="https://reg-sys-passport.onrender.com" target="_blank" class="float-start text-decoration-none"><i
+                class="fa-sharp fa-solid fa-link me-1"></i>Deployed (Render)</a>
+            <a href="./resources/demo.html" target="_blank" class="float-end text-decoration-none"><i
+                class="fa-brands fa-youtube text-danger me-1"></i>Summary</a>
+          </li>
+        </ul>
       </div>
-    </div>
-    <!--
-
-
- -->
-    <div id="algorithms" class="container my-2 pt-2 rounded-3">
-      <span class="d-block w-100 text-center col_title col_title_big pb-sm-2">
-        <i class="fas fa-code-commit"></i>
-        Classic Algorithms <i class="fas fa-code-commit"></i>
-      </span>
-      <div class="accordion" id="accordionExample">
-        <!--  -->
-        <div class="accordion-item border-0 my-1">
-          <h2 class="accordion-header" id="headingOne">
-            <button
-              class="accordion-button text-success rounded-pill bg-success bg-opacity-10 text-success rounded-pill bg-success bg-opacity-10"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapse"
-              aria-expanded="true"
-              aria-controls="collapse"
-            >
-              Backtracking<span
-                class="ms-5 badge p-2 bg-warning text-dark rounded-3"
-                >4</span
-              >
-            </button>
-          </h2>
-          <div
-            id="collapse"
-            class="accordion-collapse collapse show"
-            aria-labelledby="headingOne"
-            data-bs-parent="#accordionExample"
-          >
-            <div class="accordion-body row">
-              <ul class="col-5">
-                <li>Knights tour</li>
-                <li>N Queen</li>
-              </ul>
-              <ul class="col-5">
-                <li>Rat In A Maze</li>
-                <li>The Word Break Problem</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <!--  -->
-        <div class="accordion-item border-0 my-1">
-          <h2 class="accordion-header" id="headingTwo">
-            <button
-              class="accordion-button text-success rounded-pill bg-success bg-opacity-10"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapseTwo"
-              aria-expanded="true"
-              aria-controls="collapseTwo"
-            >
-              Dynamic Algorithm
-              <span class="ms-5 badge p-2 bg-warning text-dark rounded-3"
-                >20</span
-              >
-            </button>
-          </h2>
-          <div
-            id="collapseTwo"
-            class="accordion-collapse collapse"
-            aria-labelledby="headingTwo"
-            data-bs-parent="#accordionExample"
-          >
-            <div class="accordion-body row">
-              <ul class="col-sm-6 list-group-numbered">
-                <li>Bellman Ford Shortest PAth</li>
-                <li>Binomial Coefficient Using Dynamic Programming</li>
-                <li>Coin Change ( Minimum Number Of Coins )</li>
-                <li>Coin Chang ( Number Of Ways )</li>
-                <li>Edit Distance Levenshtein</li>
-                <li>Fibonacci Memoized Version</li>
-                <li>Fibonacci Tabulated version</li>
-                <li>Floyed Warshall ShortestPath</li>
-                <li>Optimal Strategy Game Pick</li>
-                <li>Weighted Job Scheduling</li>
-              </ul>
-              <ul class="col-sm-5">
-                <li>Longest Bitonic Subsequence</li>
-                <li>Longest Common Subsequence</li>
-                <li>Longest Common Substring</li>
-                <li>Longest Palindromic Subsequence</li>
-                <li>Longest Increasing Subsequence</li>
-                <li>Rod Cutting Problem</li>
-                <li>Matrix Chain Multiplication</li>
-                <li>Subset Sum Problem</li>
-                <li>Text Justification</li>
-                <li>Zero 1 knapsack</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <!--  -->
-        <div class="accordion-item border-0 my-1">
-          <h2 class="accordion-header" id="headingThree">
-            <button
-              class="accordion-button text-success rounded-pill bg-success bg-opacity-10"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapseThree"
-              aria-expanded="true"
-              aria-controls="collapseThree"
-            >
-              Graph & Greedy Algorithms<span
-                class="ms-5 badge p-2 bg-warning text-dark rounded-3"
-                >8</span
-              >
-            </button>
-          </h2>
-          <div
-            id="collapseThree"
-            class="accordion-collapse collapse"
-            aria-labelledby="headingThree"
-            data-bs-parent="#accordionExample"
-          >
-            <div class="accordion-body row">
-              <ul class="col-5">
-                <li>BFS</li>
-                <li>DFS</li>
-                <li>Floyd Warshall</li>
-                <li>Fractional Knapsack</li>
-              </ul>
-              <ul class="col-5">
-                <li>Topological Sort</li>
-                <li>Huffman Coding</li>
-                <li>BellmanFord Algorithm</li>
-                <li>Dijkstra</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <!--  -->
-        <div class="accordion-item border-0 my-1">
-          <h2 class="accordion-header" id="headingFive">
-            <button
-              class="accordion-button text-success rounded-pill bg-success bg-opacity-10"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapseFive"
-              aria-expanded="true"
-              aria-controls="collapseFive"
-            >
-              Number Theory
-              <span class="ms-5 badge p-2 bg-warning text-dark rounded-3"
-                >22</span
-              >
-            </button>
-          </h2>
-          <div
-            id="collapseFive"
-            class="accordion-collapse collapse"
-            aria-labelledby="headingFive"
-            data-bs-parent="#accordionExample"
-          >
-            <div class="accordion-body row px-1">
-              <ul class="col-5">
-                <li>Binomial Coefficient SpaceOptimized</li>
-                <li>Chinese Remainder</li>
-                <li>Euler Totient Function</li>
-                <li>Chinese Remainder inverse mod based</li>
-                <li>GCD Eucledian</li>
-                <li>GCF Using LCM</li>
-                <li>GCF Ladder Method</li>
-                <li>Goldbechs conjecture</li>
-                <li>Least Common Multiple</li>
-                <li>Least Common Multiple LadderMethod</li>
-                <li>Minimax Algorithm</li>
-              </ul>
-              <ul class="col-5">
-                <li>Wilsons Theorem</li>
-                <li>Swap Without 3rd Var</li>
-                <li>Sieve OF Eratosthenes</li>
-                <li>Segmented Sieve</li>
-                <li>Segmented Sieve</li>
-                <li>Prime factorization</li>
-                <li>Primality Test Miller Rabin</li>
-                <li>Primality Test Fermat Method</li>
-                <li>Pollard Rho Algorithm</li>
-                <li>Modular multiplicative inverse</li>
-                <li>Modular Exponentiation</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <!--  -->
-        <div class="accordion-item border-0 my-1">
-          <h2 class="accordion-header" id="headingFive2">
-            <button
-              class="accordion-button text-success rounded-pill bg-success bg-opacity-10 fw-bold"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapseFive2"
-              aria-expanded="true"
-              aria-controls="collapseFive2"
-            >
-              Pattern Matching<span
-                class="ms-5 badge p-2 bg-warning text-dark rounded-3"
-                >6</span
-              >
-            </button>
-          </h2>
-          <div
-            id="collapseFive2"
-            class="accordion-collapse collapse"
-            aria-labelledby="headingFive2"
-            data-bs-parent="#accordionExample"
-          >
-            <div class="accordion-body row">
-              <ul class="col-5">
-                <li>Aho Corasick</li>
-                <li>Boyer Moore Horspool</li>
-                <li>Z algorithm</li>
-              </ul>
-              <ul class="col-5">
-                <li>Knuth Moris Pratt</li>
-                <li>Rabin Karp</li>
-                <li>Wild Card Matching</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <!--  -->
-        <div class="accordion-item border-0 my-1">
-          <h2 class="accordion-header" id="headingSix">
-            <button
-              class="accordion-button text-success rounded-pill bg-success bg-opacity-10"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapseSix"
-              aria-expanded="true"
-              aria-controls="collapseSix"
-            >
-              Recursion<span
-                class="ms-5 badge p-2 bg-warning text-dark rounded-3"
-                >10</span
-              >
-            </button>
-          </h2>
-          <div
-            id="collapseSix"
-            class="accordion-collapse collapse"
-            aria-labelledby="headingSix"
-            data-bs-parent="#accordionExample"
-          >
-            <div class="accordion-body row px-1">
-              <ul class="col-5">
-                <li>Binomial Coefficient RecursionApproach</li>
-                <li>Direct Recursion</li>
-                <li>Binary Search Recursive Way</li>
-                <li>Factorial</li>
-                <li>Fibonacci</li>
-              </ul>
-              <ul class="col-5">
-                <li>Indirect Recursion</li>
-                <li>Non Tail Recursion</li>
-                <li>Reversing String Via Recursion</li>
-                <li>Tail Recursion</li>
-                <li>GCD By Recursion</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <!--  -->
-        <div class="accordion-item border-0 my-1">
-          <h2 class="accordion-header" id="headingSeven">
-            <button
-              class="accordion-button text-success rounded-pill bg-success bg-opacity-10"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapseSeven"
-              aria-expanded="true"
-              aria-controls="collapseSeven"
-            >
-              Searching And Sorting<span
-                class="ms-5 badge p-2 bg-warning text-dark rounded-3"
-                >7</span
-              >
-            </button>
-          </h2>
-          <div
-            id="collapseSeven"
-            class="accordion-collapse collapse"
-            aria-labelledby="headingSeven"
-            data-bs-parent="#accordionExample"
-          >
-            <div class="accordion-body row">
-              <ul class="col-5">
-                <li>Linear search</li>
-                <li>Binary Search</li>
-                <li>Bubble Sort</li>
-                <li>Insertion Sort</li>
-              </ul>
-              <ul class="col-5">
-                <li>Merge Sort</li>
-                <li>Quick Sort</li>
-                <li>Selection Sort</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!--
--->
-    <!--
--->
-    <div id="ml_works" class="container my-2">
-      <span class="rounded py-5 h6 fw-bold text-center d-block text-black-50"
-        >Machine Learning Works ... to be here soon
-      </span>
-    </div>
-    <!--
-
--->
-
-    <div id="project_works" class="container my-5">
-      <span
-        class="d-block w-100 text-center col_title col_title_big pb-sm-2 pb-1"
-      >
-        <i class="fas fa-code-commit"></i>
-        Projects At A Glance <i class="fas fa-code-commit"></i>
-      </span>
-      <h2 class="text-danger text-center mb-4">Still not organized ...</h2>
       <!--  -->
-      <div class="row d-flex justify-content-around rounded-3">
-        <!--  -->
-        <div id="pms_scrn" class="screenshots col-6">
-          <!-- Carousel -->
-          <div class="screenshots_desc">
-            <h4>Pharmacy Management System</h4>
-            <span class="badge text-success shadow-sm py-1">Java Swing</span>
-            <span class="badge text-success shadow-sm py-1">SQLite</span>
+      <div class="w-100 pb-1">
+        <span class="w-100 d-block text-center rounded-3 bg-success bg-opacity-25 fw-bold text-black border-0"> Hospital
+          Management System </span>
+        <ul style="font-size: 14px" class="px-2 py-1 list-unstyled text-start">
+          <li class="text-wrap">
+            <span class="text-dark fw-bold me-1">Tools:</span> java swing, SQLite
+          </li>
+          <li><span class="text-dark fw-bold me-1">Summary:</span>HMS, as final year project included - 6 different
+            modules: 1.Reception 2.Doctor 3.In-Patient 4.Admin 5.Diagnostic 6.Pharmacy .</li>
+          <li>
+            <a href=" #project_works" class="float-start text-decoration-none"><i
+                class="fa-sharp fa-solid fa-link me-1"></i>Screenshots</a>
+            <a href="./resources/demo.html" target="_blank" class="float-end text-decoration-none"><i
+                class="fa-brands fa-youtube text-danger me-1"></i>Summary</a>
+          </li>
+        </ul>
+      </div>
+      <div class="w-100 pb-1">
+        <span class="w-100 d-block text-center rounded-3 bg-success bg-opacity-25 fw-bold text-black border-0"> Pharmacy
+          Management System </span>
+        <ul style="font-size: 14px" class="px-2 list-unstyled text-start">
+          <li class="text-black text-wrap">
+            <span class="text-dark fw-bold me-1">Tools:</span> javaFx, sqlite
+          </li>
+          <li><span class="text-dark fw-bold me-1">Summary:</span>Provide managerial easiness to it’s admin, manager,
+            and sales person</li>
+          <li>
+            <a href="#project_works" class="float-start text-decoration-none"><i
+                class="fa-sharp fa-solid fa-link me-1"></i>Screenshots</a>
+            <a href="./resources/demo.html" target="_blank" class="float-end text-decoration-none"><i
+                class="fa-brands fa-youtube text-danger me-1"></i>Summary</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!--  -->
+  <!--  -->
+  <div id="algorithms" class="container mt-5 mb-2 pt-2 rounded-3">
+    <span class="d-block w-100 text-center col_title col_title_big pb-sm-2">
+      <i class="fas fa-code-commit"></i> Classic Algorithms </span>
+    <ul class="text-center list-unstyled">
+      <li> <a href="https://github.com/masumkhan081//trad_algo"
+          class="text-decoration-none  ">github.com/masumkhan081//trad_algo</a>
+      </li>
+    </ul>
+    <div class="accordion" id="c_a_accordion">
+      <!--  -->
+      <div class="accordion-item border-0 my-1">
+        <h2 class="accordion-header" id="headingOne">
+          <button
+            class="accordion-button text-success rounded-pill bg-success bg-opacity-10 text-success rounded-pill bg-success bg-opacity-10"
+            type="button" data-bs-toggle="collapse" data-bs-target="#collapse" aria-expanded="true"
+            aria-controls="collapse"> Backtracking<span class="ms-5 badge p-2 bg-warning text-dark rounded-3">4</span>
+          </button>
+        </h2>
+        <div id="collapse" class="accordion-collapse collapse" aria-labelledby="headingOne"
+          data-bs-parent="#c_a_accordion">
+          <div class="accordion-body row ms-3">
+            <ul class="col-sm-6">
+              <li>Knights tour</li>
+              <li>The Word Break Problem</li>
+            </ul>
+            <ul class="col-sm-6">
+              <li>Rat In A Maze</li>
+              <li>N Queen</li>
+            </ul>
           </div>
-          <div id="pms_carousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img
-                  src="./resources/screenchots/pms/slctd (1).png"
-                  class="d-block project_img"
-                  alt="..."
-                />
-              </div>
-              <div class="carousel-item">
-                <img
-                  src="./resources/screenchots/pms/slctd (2).png"
-                  class="d-block project_img"
-                  alt="..."
-                />
-              </div>
-              <div class="carousel-item">
-                <img
-                  src="./resources/screenchots/pms/slctd (3).png"
-                  class="d-block project_img"
-                  alt="..."
-                />
-              </div>
-              <div class="carousel-item">
-                <img
-                  src="./resources/screenchots/pms/slctd (4).png"
-                  class="d-block project_img"
-                  alt="..."
-                />
-              </div>
-              <div class="carousel-item">
-                <img
-                  src="./resources/screenchots/pms/slctd (5).png"
-                  class="d-block project_img"
-                  alt="..."
-                />
-              </div>
+        </div>
+      </div>
+      <!--  -->
+      <div class="accordion-item border-0 my-1">
+        <h2 class="accordion-header" id="dynamic_header">
+          <button class="accordion-button text-success rounded-pill bg-success bg-opacity-10" type="button"
+            data-bs-toggle="collapse" data-bs-target="#dynamic_collapse" aria-expanded="true"
+            aria-controls="dynamic_collapse"> Dynamic Algorithm <span
+              class="ms-5 badge p-2 bg-warning text-dark rounded-3">20</span>
+          </button>
+        </h2>
+        <div id="dynamic_collapse" class="accordion-collapse collapse" aria-labelledby="dynamic_header"
+          data-bs-parent="#c_a_accordion">
+          <div class="accordion-body row ms-3">
+            <ul class="col-sm-6">
+              <li>Bellman Ford Shortest PAth</li>
+              <li>Binomial Coefficient Using Dynamic Programming</li>
+              <li>Coin Change ( Minimum Number Of Coins )</li>
+              <li>Coin Chang ( Number Of Ways )</li>
+              <li>Edit Distance Levenshtein</li>
+              <li>Fibonacci Memoized Version</li>
+              <li>Fibonacci Tabulated version</li>
+              <li>Floyed Warshall ShortestPath</li>
+              <li>Optimal Strategy Game Pick</li>
+              <li>Weighted Job Scheduling</li>
+            </ul>
+            <ul class="col-sm-6">
+              <li>Longest Bitonic Subsequence</li>
+              <li>Longest Common Subsequence</li>
+              <li>Longest Common Substring</li>
+              <li>Longest Palindromic Subsequence</li>
+              <li>Longest Increasing Subsequence</li>
+              <li>Rod Cutting Problem</li>
+              <li>Matrix Chain Multiplication</li>
+              <li>Subset Sum Problem</li>
+              <li>Text Justification</li>
+              <li>Zero 1 knapsack</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--  -->
+      <div class="accordion-item border-0 my-1">
+        <h2 class="accordion-header" id="graph_greedy_header">
+          <button class="accordion-button text-success rounded-pill bg-success bg-opacity-10" type="button"
+            data-bs-toggle="collapse" data-bs-target="#graph_greedy_collapse" aria-expanded="true"
+            aria-controls="graph_greedy_collapse"> Graph & Greedy Algorithms<span
+              class="ms-5 badge p-2 bg-warning text-dark rounded-3">8</span>
+          </button>
+        </h2>
+        <div id="graph_greedy_collapse" class="accordion-collapse collapse" aria-labelledby="graph_greedy_header"
+          data-bs-parent="#c_a_accordion">
+          <div class="accordion-body row ms-3">
+            <ul class="col-sm-6">
+              <li>Floyd Warshall</li>
+              <li>Fractional Knapsack</li>
+              <li>BellmanFord Algorithm</li>
+              <li>Topological Sort</li>
+            </ul>
+            <ul class="col-sm-6">
+              <li>BFS</li>
+              <li>DFS</li>
+              <li>Huffman Coding</li>
+              <li>Dijkstra</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--  -->
+      <div class="accordion-item border-0 my-1">
+        <h2 class="accordion-header" id="n_t_accordion_header">
+          <button class="accordion-button text-success rounded-pill bg-success bg-opacity-10" type="button"
+            data-bs-toggle="collapse" data-bs-target="#n_t_collapse" aria-expanded="true" aria-controls="n_t_collapse">
+            Number Theory <span class="ms-5 badge p-2 bg-warning text-dark rounded-3">22</span>
+          </button>
+        </h2>
+        <div id="n_t_collapse" class="accordion-collapse collapse" aria-labelledby="n_t_accordion_header"
+          data-bs-parent="#c_a_accordion">
+          <div class="accordion-body row ms-3">
+            <ul class="col-sm-6">
+              <li>Binomial Coefficient SpaceOptimized</li>
+              <li>Euler Totient Function</li>
+              <li>Sieve OF Eratosthenes</li>
+              <li>Chinese Remainder inverse mod based</li>
+              <li>Primality Test Miller Rabin</li>
+              <li>Primality Test Fermat Method</li>
+              <li>Modular multiplicative inverse</li>
+              <li>Least Common Multiple</li>
+              <li>Modular Exponentiation</li>
+              <li>Least Common Multiple LadderMethod</li>
+            </ul>
+            <ul class="col-sm-6">
+              <li>Wilsons Theorem</li>
+              <li>Swap Without 3rd Var</li>
+              <li>Segmented Sieve</li>
+              <li>Segmented Sieve</li>
+              <li>Prime factorization</li>
+              <li>GCD Eucledian</li>
+              <li>GCF Using LCM</li>
+              <li>GCF Ladder Method</li>
+              <li>Goldbechs conjecture</li>
+              <li>Pollard Rho Algorithm</li>
+              <li>Minimax Algorithm</li>
+              <li>Chinese Remainder</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--  -->
+      <div class="accordion-item border-0 my-1">
+        <h2 class="accordion-header" id="n_t_accordion_header2">
+          <button class="accordion-button text-success rounded-pill bg-success bg-opacity-10 " type="button"
+            data-bs-toggle="collapse" data-bs-target="#p_t_collapse" aria-expanded="true" aria-controls="p_t_collapse">
+            Pattern Matching<span class="ms-5 badge p-2 bg-warning text-dark rounded-3">6</span>
+          </button>
+        </h2>
+        <div id="p_t_collapse" class="accordion-collapse collapse" aria-labelledby="n_t_accordion_header2"
+          data-bs-parent="#c_a_accordion">
+          <div class="accordion-body row ms-3">
+            <ul class="col-sm-6">
+              <li>Knuth Moris Pratt</li>
+              <li>Wild Card Matching</li>
+              <li>Boyer Moore Horspool</li>
+            </ul>
+            <ul class="col-sm-6">
+              <li>Rabin Karp</li>
+              <li>Aho Corasick</li>
+              <li>Z algorithm</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--  -->
+      <div class="accordion-item border-0 my-1">
+        <h2 class="accordion-header" id="headingSix">
+          <button class="accordion-button text-success rounded-pill bg-success bg-opacity-10" type="button"
+            data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+            Recursion<span class="ms-5 badge p-2 bg-warning text-dark rounded-3">10</span>
+          </button>
+        </h2>
+        <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+          data-bs-parent="#c_a_accordion">
+          <div class="accordion-body row ms-3">
+            <ul class="col-sm-6">
+              <li>Binomial Coefficient RecursionApproach</li>
+              <li>Binary Search Recursive Way</li>
+              <li>Reversing String Via Recursion</li>
+              <li>Indirect Recursion</li>
+              <li>Non Tail Recursion</li>
+            </ul>
+            <ul class="col-sm-6">
+              <li>Direct Recursion</li>
+              <li>Factorial</li>
+              <li>Fibonacci</li>
+              <li>Tail Recursion</li>
+              <li>GCD By Recursion</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--  -->
+      <div class="accordion-item border-0 my-1">
+        <h2 class="accordion-header" id="search_sort_accordion_header">
+          <button class="accordion-button text-success rounded-pill bg-success bg-opacity-10" type="button"
+            data-bs-toggle="collapse" data-bs-target="#search_sort_collapse" aria-expanded="true"
+            aria-controls="search_sort_collapse"> Searching And Sorting<span
+              class="ms-5 badge p-2 bg-warning text-dark rounded-3">7</span>
+          </button>
+        </h2>
+        <div id="search_sort_collapse" class="accordion-collapse collapse"
+          aria-labelledby="search_sort_accordion_header" data-bs-parent="#c_a_accordion">
+          <div class="accordion-body row ms-3">
+            <ul class="col-sm-6">
+              <li>Linear search</li>
+              <li>Binary Search</li>
+              <li>Bubble Sort</li>
+              <li>Insertion Sort</li>
+            </ul>
+            <ul class="col-sm-6">
+              <li>Merge Sort</li>
+              <li>Quick Sort</li>
+              <li>Selection Sort</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--
+-->
+  <!--
+-->
+  <div id="ml_works" class="container mt-5">
+    <span class="d-block w-100 text-center col_title col_title_big pb-sm-2">
+      <i class="fas fa-brain  me-1  "></i> Machine Learning </span>
+    <ul class="text-center list-unstyled">
+      <li><a href="https://github.com/masumkhan081/ml-raw-coding" target="_blank"
+          class=" text-center text-decoration-none"> github.com/masumkhan081/ml-raw-coding</a></li>
+      <li></li><a href="https://github.com/masumkhan081//machine_algorithm" target="_blank"
+        class=" text-center  text-decoration-none"> github.com/masumkhan081//machine_algorithm</a></li>
+    </ul>
+    <div class="accordion" id="clustering_accordion">
+      <div class="accordion-item border-0 my-1">
+        <h2 class="accordion-header" id="clustering_accordion-header">
+          <button class="accordion-button text-success rounded-pill bg-success bg-opacity-10" type="button"
+            data-bs-toggle="collapse" data-bs-target="#clustering_collapse" aria-expanded="true"
+            aria-controls="clustering_collapse"> Clustering<span
+              class="ms-5 badge p-2 bg-warning text-dark rounded-3">0</span>
+          </button>
+        </h2>
+        <div id="clustering_collapse" class="accordion-collapse collapse" aria-labelledby="clustering_accordion-header"
+          data-bs-parent="#clustering_accordion">
+          <div class="accordion-body row ms-3">
+            <ul class="col-sm-6">
+              <li>Data to be added soon</li>
+            </ul>
+            <ul class="col-sm-6">
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--  -->
+      <div class="accordion-item border-0 my-1">
+        <h2 class="accordion-header" id="rcmdsyst_accordion-header">
+          <button class="accordion-button text-success rounded-pill bg-success bg-opacity-10" type="button"
+            data-bs-toggle="collapse" data-bs-target="#rcmdsyst_collapse" aria-expanded="true"
+            aria-controls="rcmdsyst_collapse"> Recommendation System<span
+              class="ms-5 badge p-2 bg-warning text-dark rounded-3">0</span>
+          </button>
+        </h2>
+        <div id="rcmdsyst_collapse" class="accordion-collapse collapse" aria-labelledby="rcmdsyst_accordion-header"
+          data-bs-parent="#rcmdsyst_accordion">
+          <div class="accordion-body row ms-3">
+            <ul class="col-sm-6">
+              <li>Data to be added soon</li>
+            </ul>
+            <ul class="col-sm-6">
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--
 
-              <div class="carousel-item">
-                <img
-                  src="./resources/screenchots/pms/slctd (6).png"
-                  class="d-block project_img"
-                  alt="..."
-                />
-              </div>
-              <div class="carousel-item">
-                <img
-                  src="./resources/screenchots/pms/slctd (7).png"
-                  class="d-block project_img"
-                  alt="..."
-                />
-              </div>
-            </div>
-            <button
-              class="carousel-control-prev"
-              type="button"
-              data-bs-target="#pms_carousel"
-              data-bs-slide="prev"
-            >
-              <span
-                class="carousel-control-prev-icon"
-                aria-hidden="true"
-              ></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button
-              class="carousel-control-next"
-              type="button"
-              data-bs-target="#pms_carousel"
-              data-bs-slide="next"
-            >
-              <span
-                class="carousel-control-next-icon"
-                aria-hidden="true"
-              ></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
+
+
+  -->
+  </div>
+  <!--
+
+-->
+  <div id="project_works" class="container my-5">
+    <span class="d-block w-100 text-center col_title col_title_big pb-sm-2 pb-1">
+      <i class="fas fa-tasks"></i> Projects At A Glance </span>
+    <h2 class="text-danger text-center mb-4">Still not organized ...</h2>
+    <!--  -->
+    <div class="row d-flex justify-content-around rounded-3">
+      <!--  -->
+      <div id="pms_scrn" class="screenshots col-6">
+        <!-- Carousel -->
+        <div class="screenshots_desc">
+          <h4>Pharmacy Management System</h4>
+          <span class="badge text-success shadow-sm py-1">Java Swing</span>
+          <span class="badge text-success shadow-sm py-1">SQLite</span>
         </div>
-        <!--  -->
-        <div id="task_scrn" class="screenshots">
-          <!-- Carousel -->
-          <div class="screenshots_desc">
-            <h4>Task Distribution</h4>
-            <span class="badge text-success shadow-sm py-1">Mongodb</span>
-            <span class="badge text-success shadow-sm py-1">Express</span>
-            <span class="badge text-success shadow-sm py-1">JWT</span>
-            <span class="badge text-success shadow-sm py-1">Nodemailer</span>
-          </div>
-          <div
-            id="task_carousel"
-            class="carousel slide"
-            data-bs-ride="carousel"
-          >
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img
-                  src="./resources/screenchots/task/slctd (1).png"
-                  class="d-block project_img"
-                  alt="..."
-                />
-              </div>
-              <div class="carousel-item">
-                <img
-                  src="./resources/screenchots/task/slctd (2).png"
-                  class="d-block project_img"
-                  alt="..."
-                />
-              </div>
-              <div class="carousel-item">
-                <img
-                  src="./resources/screenchots/task/slctd (3).png"
-                  class="d-block project_img"
-                  alt="..."
-                />
-              </div>
+        <div id="pms_carousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="./resources/screenchots/pms/slctd (1).png" class="d-block project_img" alt="..." />
             </div>
-            <button
-              class="carousel-control-prev"
-              type="button"
-              data-bs-target="#task_carousel"
-              data-bs-slide="prev"
-            >
-              <span
-                class="carousel-control-prev-icon"
-                aria-hidden="true"
-              ></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button
-              class="carousel-control-next"
-              type="button"
-              data-bs-target="#hms_carousel"
-              data-bs-slide="next"
-            >
-              <span
-                class="carousel-control-next-icon"
-                aria-hidden="true"
-              ></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
-        </div>
-        <!--  -->
-        <div id="resume_scrn" class="screenshots">
-          <!-- Carousel -->
-          <div class="screenshots_desc">
-            <h4>Online Resume Builder</h4>
-            <span class="badge text-success shadow-sm py-1">React</span>
-            <span class="badge text-success shadow-sm py-1">Firestore</span>
-            <span class="badge text-success shadow-sm py-1">Firebase Auth</span>
-            <span class="badge text-success shadow-sm py-1"
-              >React-Bootstrap</span
-            >
-          </div>
-          <div
-            id="resume_builder_carousel"
-            class="carousel slide"
-            data-bs-ride="carousel"
-          >
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img
-                  src="./resources/screenchots/resume/slctd (1).png"
-                  class="d-block project_img"
-                  alt="..."
-                />
-              </div>
-              <div class="carousel-item">
-                <img
-                  src="./resources/screenchots/resume/slctd (2).png"
-                  class="d-block project_img"
-                  alt="..."
-                />
-              </div>
-              <div class="carousel-item">
-                <img
-                  src="./resources/screenchots/resume/slctd (3).png"
-                  class="d-block project_img"
-                  alt="..."
-                />
-              </div>
-              <div class="carousel-item">
-                <img
-                  src="./resources/screenchots/resume/slctd (5).png"
-                  class="d-block project_img"
-                  alt="..."
-                />
-              </div>
-              <div class="carousel-item">
-                <img
-                  src="./resources/screenchots/resume/slctd (6).png"
-                  class="d-block project_img"
-                  alt="..."
-                />
-              </div>
+            <div class="carousel-item">
+              <img src="./resources/screenchots/pms/slctd (2).png" class="d-block project_img" alt="..." />
             </div>
-            <button
-              class="carousel-control-prev"
-              type="button"
-              data-bs-target="#resume_builder_carousel"
-              data-bs-slide="prev"
-            >
-              <span
-                class="carousel-control-prev-icon"
-                aria-hidden="true"
-              ></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button
-              class="carousel-control-next"
-              type="button"
-              data-bs-target="#carouselExampleControls"
-              data-bs-slide="next"
-            >
-              <span
-                class="carousel-control-next-icon"
-                aria-hidden="true"
-              ></span>
-              <span class="visually-hidden">Next</span>
-            </button>
+            <div class="carousel-item">
+              <img src="./resources/screenchots/pms/slctd (3).png" class="d-block project_img" alt="..." />
+            </div>
+            <div class="carousel-item">
+              <img src="./resources/screenchots/pms/slctd (4).png" class="d-block project_img" alt="..." />
+            </div>
+            <div class="carousel-item">
+              <img src="./resources/screenchots/pms/slctd (5).png" class="d-block project_img" alt="..." />
+            </div>
+            <div class="carousel-item">
+              <img src="./resources/screenchots/pms/slctd (6).png" class="d-block project_img" alt="..." />
+            </div>
+            <div class="carousel-item">
+              <img src="./resources/screenchots/pms/slctd (7).png" class="d-block project_img" alt="..." />
+            </div>
           </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#pms_carousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#pms_carousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
-        <!--
+      </div>
+      <!--  -->
+      <div id="task_scrn" class="screenshots">
+        <!-- Carousel -->
+        <div class="screenshots_desc">
+          <h4>Task Distribution</h4>
+          <span class="badge text-success shadow-sm py-1">Mongodb</span>
+          <span class="badge text-success shadow-sm py-1">Express</span>
+          <span class="badge text-success shadow-sm py-1">JWT</span>
+          <span class="badge text-success shadow-sm py-1">Nodemailer</span>
+        </div>
+        <div id="task_carousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="./resources/screenchots/task/slctd (1).png" class="d-block project_img" alt="..." />
+            </div>
+            <div class="carousel-item">
+              <img src="./resources/screenchots/task/slctd (2).png" class="d-block project_img" alt="..." />
+            </div>
+            <div class="carousel-item">
+              <img src="./resources/screenchots/task/slctd (3).png" class="d-block project_img" alt="..." />
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#task_carousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#hms_carousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <!--  -->
+      <div id="resume_scrn" class="screenshots">
+        <!-- Carousel -->
+        <div class="screenshots_desc">
+          <h4>Online Resume Builder</h4>
+          <span class="badge text-success shadow-sm py-1">React</span>
+          <span class="badge text-success shadow-sm py-1">Firestore</span>
+          <span class="badge text-success shadow-sm py-1">Firebase Auth</span>
+          <span class="badge text-success shadow-sm py-1">React-Bootstrap</span>
+        </div>
+        <div id="resume_builder_carousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="./resources/screenchots/resume/slctd (1).png" class="d-block project_img" alt="..." />
+            </div>
+            <div class="carousel-item">
+              <img src="./resources/screenchots/resume/slctd (2).png" class="d-block project_img" alt="..." />
+            </div>
+            <div class="carousel-item">
+              <img src="./resources/screenchots/resume/slctd (3).png" class="d-block project_img" alt="..." />
+            </div>
+            <div class="carousel-item">
+              <img src="./resources/screenchots/resume/slctd (5).png" class="d-block project_img" alt="..." />
+            </div>
+            <div class="carousel-item">
+              <img src="./resources/screenchots/resume/slctd (6).png" class="d-block project_img" alt="..." />
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#resume_builder_carousel"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <!--
 
          -->
-
-        <div id="hms_scrn" class="screenshots">
-          <!-- Carousel -->
-          <div class="screenshots_desc">
-            <h4>Drug Info</h4>
-            <span class="badge text-success shadow-sm py-1">Express</span>
-            <span class="badge text-success shadow-sm py-1"
-              >Mongodb Atlas/ mongoose</span
-            >
-            <span class="badge text-success shadow-sm py-1">Bootstrap</span>
-            <span class="badge text-success shadow-sm py-1">EJS </span>
-          </div>
-          <div
-            id="drugs_info_carousel"
-            class="carousel slide"
-            data-bs-ride="carousel"
-          >
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img
-                  src="./resources/screenchots/drugs/slctd (1).png"
-                  class="d-block project_img"
-                  alt="..."
-                />
-              </div>
-              <div class="carousel-item">
-                <img
-                  src="./resources/screenchots/drugs/slctd (2).png"
-                  class="d-block project_img"
-                  alt="..."
-                />
-              </div>
-              <div class="carousel-item">
-                <img
-                  src="./resources/screenchots/drugs/slctd (3).png"
-                  class="d-block project_img"
-                  alt="..."
-                />
-              </div>
-            </div>
-            <button
-              class="carousel-control-prev"
-              type="button"
-              data-bs-target="#drugs_info_carousel"
-              data-bs-slide="prev"
-            >
-              <span
-                class="carousel-control-prev-icon"
-                aria-hidden="true"
-              ></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button
-              class="carousel-control-next"
-              type="button"
-              data-bs-target="#hms_carousel"
-              data-bs-slide="next"
-            >
-              <span
-                class="carousel-control-next-icon"
-                aria-hidden="true"
-              ></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
+      <div id="hms_scrn" class="screenshots">
+        <!-- Carousel -->
+        <div class="screenshots_desc">
+          <h4>Drug Info</h4>
+          <span class="badge text-success shadow-sm py-1">Express</span>
+          <span class="badge text-success shadow-sm py-1">Mongodb Atlas/ mongoose</span>
+          <span class="badge text-success shadow-sm py-1">Bootstrap</span>
+          <span class="badge text-success shadow-sm py-1">EJS </span>
         </div>
-
-        <!--  -->
+        <div id="drugs_info_carousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="./resources/screenchots/drugs/slctd (1).png" class="d-block project_img" alt="..." />
+            </div>
+            <div class="carousel-item">
+              <img src="./resources/screenchots/drugs/slctd (2).png" class="d-block project_img" alt="..." />
+            </div>
+            <div class="carousel-item">
+              <img src="./resources/screenchots/drugs/slctd (3).png" class="d-block project_img" alt="..." />
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#drugs_info_carousel"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#hms_carousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
       </div>
+      <!--  -->
     </div>
-
-    <!--
+  </div>
+  <!--
 
 -->
-    <div id="brief" class="bg-success bg-opacity-25 my-2">
-      <span class="py-auto h6 fw-bold text-center d-block text-black-50"
-        >Recorded demonstration on projects would be here ...
-      </span>
-    </div>
-    <!--
+  <div id="brief" class=" my-2">
+    <span class="py-auto h6 fw-bold text-center d-block text-black-50">Recorded demonstration on projects would be here
+      ... </span>
+  </div>
+  <!--
 
 -->
-    <div id="about_me" class="container my-2">
-      <span
-        class="rounded py-5 h6 fw-bold text-center d-block text-black-50 badge text-wrap text-success"
-      >
-        I'm a full-stack developer. My development skills include node-express,
-        react-redux-next along with effective node and react libraries. My web
-        projects are built on these technologies using one among mongodb,
-        postgresql, or firestore as the data-tier ( masumk081.web.app ). I have
-        focused on problem-solving as well as implementing classic and
-        machine-learning algorithms untill taking MERN stack as the career
-        choice. As of experience, I worked with two tech companies for three
-        years, and developed few desktop applications personally.
-      </span>
-      <span class="rounded py-auto h6 fw-bold text-center d-block text-black-50"
-        >Hosted On:<span class="text-primary text-opacity-75 ms-2"
-          >Firebase</span
-        ></span
-      >
+  <div id="about_me" class=" py-5">
+    <div class="container">
+      <span class="rounded my-1 fw-bold text-center d-block   text-wrap about_me_text"> I am a full-stack (Jr) web
+        developer. I have worked and developed my skills following the MERN stack along with effective node & react
+        libraries. </span>
+      <span class="rounded my-1 fw-bold text-center d-block   text-wrap about_me_text"> As of May 15, I'm looking for a
+        job opportunity while approaching different software companies with a good work environment. I am Willing to
+        relocate and ready to face interviews.</span>
     </div>
-    <!--
+    <div class="py-3">
+      <span class="rounded fw-bold text-center d-block about_me_text about_me_text_color h5 text-wrap  "> The positions
+        I am interested in: </span>
+      <ul class="list-unstyled text-center py-2 d-flex flex-column about_me_text_color">
+        <li>Full Stack Developer</li>
+        <li>Back-end Developer</li>
+        <li>Front-end Developer</li>
+      </ul>
+      <ul class="list-unstyled text-center py-2 fs-6 text-light">
+        <li class="  "> 01833347848 / <a class=" text-light" href="https://linkedin.com/in/masumkhan">Linkedin</a>
+        </li>
+      </ul>
+    </div>
+    <div id="deployed_on">
+      <span class="  py-2 h6 fw-bold text-center d-block text-warning text-opacity-50">Hosted On: Firebase </span>
+    </div>
+  </div>
+  <!--
 
 
 -->
-    <!-- Hobby icons,lik without text, interests, about me -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
-    <script>
-      function toggle_theme() {
-        if (document.getElementById("btn_toggle").innerHTML == "Dark") {
-          document.getElementById("btn_toggle").innerHTML = "Light";
-          document.getElementById("body").className = "";
-          document.getElementById("body").style =
-            "background-color:DarkSlateGray";
-          document.getElementById("div3").className =
-            "col-md-3 bg-warning bg-opacity-10 text-light";
+  <!-- Hobby icons,lik without text, interests, about me -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+  <script>
+    function toggle_theme() {
+      if (document.getElementById("btn_toggle").innerHTML == "Dark") {
+        document.getElementById("btn_toggle").innerHTML = "Light";
+        document.getElementById("body").className = "";
+        document.getElementById("body").style =
+          "background-color:DarkSlateGray";
+        document.getElementById("div3").className =
+          "col-md-3 bg-warning bg-opacity-10 text-light";
 
-          document.getElementById("div3inner").className = " text-light";
-          document.getElementById("div2").style =
-            "background-color: rgb(19, 60, 60);";
-        } else {
-          document.getElementById("btn_toggle").innerHTML = "Dark";
-          document.getElementById("div3").className =
-            "bg-dark col-md-3 bg-opacity-75";
-          document.getElementById("div2").style =
-            "background-color: rgb(109, 60, 0);";
-        }
+        document.getElementById("div3inner").className = " text-light";
+        document.getElementById("div2").style =
+          "background-color: rgb(19, 60, 60);";
+      } else {
+        document.getElementById("btn_toggle").innerHTML = "Dark";
+        document.getElementById("div3").className =
+          "bg-dark col-md-3 bg-opacity-75";
+        document.getElementById("div2").style =
+          "background-color: rgb(109, 60, 0);";
       }
-    </script>
-  </body>
+    }
+  </script>
+</body>
+
 </html>
