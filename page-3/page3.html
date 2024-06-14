@@ -5,8 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./page3.css" />
-    <!-- <link rel="stylesheet" href="./styles/style.css" /> -->
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <div id="root">
@@ -17,35 +22,64 @@
         </div>
 
         <div id="container_middle">
-          <h3>Select your prefered destination(s)</h3>
-          <div id="id_destinations">
-            <div class="destination">
-              <img
-                src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg"
-                alt="United Kingdom"
-              />
-              <p>United Kingdom</p>
+          <h3>Admission Preference</h3>
+          <form id="id_info_form">
+            <div class="form_unit">
+              <label>Preferred Course</label>
+              <div class="form_field">
+                <!-- <i class="fa fa-user are-medium" aria-hidden="true"></i> -->
+                <select id="id_coursename">
+                  <option value="" disabled selected>
+                    Select a preferred course
+                  </option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                </select>
+              </div>
             </div>
-            <div class="destination">
-              <img
-                src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg"
-                alt="United States"
-              />
-              <p>United States</p>
+            <div class="form_unit">
+              <label>Last Acadesmc Qualification</label>
+              <div class="form_field">
+                <select id="id_qualification">
+                  <option value="" disabled selected>
+                    Select your last academic qualifiction
+                  </option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                </select>
+              </div>
             </div>
-            <div class="destination">
-              <img
-                src="https://upload.wikimedia.org/wikipedia/en/b/b9/Flag_of_Australia.svg"
-                alt="Australia"
-              />
-              <p>Australia</p>
+          </form>
+
+          <div id="ielts_info">
+            <div>
+              <i class="fa-solid fa-circle-info is-medium"></i>
+              <span>Has IELTS Taken?</span>
             </div>
-            <div class="destination">
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Flag_of_Canada.svg"
-                alt="Canada"
-              />
-              <p>Canada</p>
+            <div class="rdio_form">
+              <div class="rdio_form_unit">
+                <input
+                  type="radio"
+                  id="rdio_ielts_taken"
+                  name="rdio_is_ielts_taken"
+                  value="Yes"
+                />
+                <label for="rdio_ielts_taken">Yes</label>
+              </div>
+
+              <div class="rdio_form_unit">
+                <input
+                  type="radio"
+                  id="rdio_ielts_not_taken"
+                  name="rdio_is_ielts_taken"
+                  value="No"
+                />
+                <label for="rdio_ielts_not_taken">No</label>
+              </div>
             </div>
           </div>
         </div>
