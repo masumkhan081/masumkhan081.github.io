@@ -56,9 +56,7 @@ h1 {
   gap: 10px;
   /* border: #811d1d 3px solid; */
 }
-#id_destinations h3 {
-  /* border: #811d1d 3px solid; */
-}
+ 
 .destination {
   display: flex;
   flex-direction: column;
@@ -94,14 +92,19 @@ h1 {
 #container_bottom {
 }
 
-#id_btn_next {
-  background-color: rgb(5, 202, 5);
+.btn_move {
   color: #ffffff;
   padding: 10px 40px;
   border-radius: 10px;
   font-size: large;
   border: none;
   text-decoration: none;
+}
+.btn_next {
+  background-color: rgb(5, 202, 5);
+}
+.btn_back {
+  background-color: rgb(175, 45, 5);
 }
 
 /* -------------------------------------------------------------------------------------------------- */
